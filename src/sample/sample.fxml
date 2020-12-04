@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <tabs>
@@ -26,7 +27,7 @@
                         <Button mnemonicParsing="false" onAction="#calculator" text="Click here to Add" />
                         <Button mnemonicParsing="false" onAction="#calculatorSubtraction" text="Click here to Subtract" />
                         <Button mnemonicParsing="false" onAction="#calculatorDivision" text="Click here to Divide" />
-                        <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="317.0" text="Enter your values first.&#10;Main calculate feature defaults to&#10;addition.&#10;Clicking the features at the top left will do what they say" translateX="151.0" translateY="-28.0" />
+                        <TextArea editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="317.0" text="Enter your values first.&#10;Main calculate feature defaults to&#10;addition.&#10;Clicking the features at the top left will do what they say" translateX="151.0" translateY="-28.0" />
                         <Button mnemonicParsing="false" onAction="#calculatorMultiplication" text="Click here to Multiply" translateY="-100.0" />
                         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="100.0" text="Calculator" translateX="250.0" translateY="-198.0">
                            <font>
@@ -112,7 +113,7 @@
                                     <Insets left="180.0" top="5.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="textField1" prefHeight="40.0" prefWidth="187.0" translateX="-15.0" translateY="-144.0">
+                              <TextField fx:id="textField1" editable="false" prefHeight="40.0" prefWidth="187.0" translateX="-15.0" translateY="-144.0">
                                  <font>
                                     <Font name="GungSeo Regular" size="15.0" />
                                  </font>
@@ -153,9 +154,94 @@
                         </ImageView>
                      </children>
                   </VBox>
-                  <TextArea fx:id="textArea" layoutX="427.0" layoutY="186.0" prefHeight="131.0" prefWidth="147.0" text="You rolled:  " />
+                  <TextArea fx:id="textArea" editable="false" layoutX="427.0" layoutY="186.0" prefHeight="131.0" prefWidth="147.0" text="You rolled:  " />
                </children>
             </AnchorPane>
          </content></Tab>
+      <Tab text="ReviewTerning">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="160.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review my dice" textAlignment="CENTER" translateX="6.0" translateY="20.0" wrappingWidth="284.5625">
+                     <font>
+                        <Font name="Georgia" size="24.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="textAreaStuff" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="600.0" promptText="Insert review here">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="textbutton" alignment="CENTER" contentDisplay="CENTER" layoutX="155.0" layoutY="58.0" mnemonicParsing="false" onAction="#logs" prefHeight="46.0" prefWidth="306.0" style="-fx-background-color: #0b647f#0b647f;" text="Save here and exit when done" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="GungSeo Regular" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textFieldReview" editable="false" layoutY="336.0" prefHeight="37.0" prefWidth="600.0" promptText="Path" />
+                  <TextField fx:id="insertttile" layoutY="81.0" prefHeight="25.0" prefWidth="153.0" promptText="name document here:" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="ReviewLommeregner">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="152.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review my Lommeregner" textAlignment="CENTER" translateX="6.0" translateY="20.0" wrappingWidth="284.5625">
+                     <font>
+                        <Font name="Georgia" size="24.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="textAreaStuff1" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="600.0" promptText="Insert review here">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="textbutton1" alignment="CENTER" contentDisplay="CENTER" layoutX="155.0" layoutY="58.0" mnemonicParsing="false" onAction="#logsLommeregner" prefHeight="46.0" prefWidth="305.0" style="-fx-background-color: #0b647f#0b647f;" text="Save here and exit when done" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="GungSeo Regular" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textFieldReview1" editable="false" layoutY="336.0" prefHeight="37.0" prefWidth="600.0" promptText="Path" />
+                  <TextField fx:id="insertttile1" layoutY="81.0" prefHeight="25.0" prefWidth="153.0" promptText="name document here:" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Lotto">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="textLotto" layoutX="200.0" layoutY="256.0" prefHeight="115.0" prefWidth="200.0" promptText="Enter 5 values here:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Text layoutX="220.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lotto-trækning">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="257.0" layoutY="202.0" mnemonicParsing="false" onAction="#Lotto" text="Start">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textFieldLotto" editable="false" layoutX="-1.0" layoutY="257.0" prefHeight="113.0" prefWidth="199.0" promptText="Result:" />
+                  <TextArea editable="false" layoutX="400.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="198.0" text="Tutorial: Values between 1-90&#10;Enter 5 values - each on a new line.&#10;If you get 1 of the values correct&#10;then you win!&#10;else you lose ):" />
+                  <ImageView fitHeight="149.0" fitWidth="237.0" layoutX="25.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@6977700-lotto.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="227.0" layoutX="352.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@6977700-lotto.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
   </tabs>
 </TabPane>
